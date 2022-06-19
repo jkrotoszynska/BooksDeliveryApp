@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastController, IonSlides, IonSlide, IonGrid, AlertController } from '@ionic/angular';
 import { FireserviceService } from '../fireservice.service';
 
 @Component({
@@ -13,12 +14,24 @@ export class LoginPage implements OnInit {
 
   constructor(
     public router: Router,
-    public fireService: FireserviceService
+    public fireService: FireserviceService,
+    public alertController: AlertController
   ) { }
 
   ngOnInit() {
   }
 
+  async showAlert() {
+    const alert = await this.alertController.create({
+      header: 'Login failed',
+      message: ' Invalid mail or password.',
+      buttons: ['OK']
+    });
+    await alert.present();
+
+    const {role} = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
 
   login(){
     this.fireService.loginWithEmail({email:this.email,password:this.password}).then(res=>{
@@ -26,35 +39,19 @@ export class LoginPage implements OnInit {
       if(res.user.uid){
         this.fireService.getDetails({uid:res.user.uid}).subscribe(ress=>{
           console.log(ress);
-          alert('Welcome '+ ress['name']);
+          //alert('Welcome '+ ress['name']);
+          this.router.navigateByUrl('home');
         },err=>{
           console.log(err);
         });
       }
     },err=>{
-      alert(err.message);
+      //alert(err.message);
+      this.showAlert();
       console.log(err);
     });
   }
-
-
   signup(){
     this.router.navigateByUrl('signup');
   }
 }
-
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-login',
-//   templateUrl: './login.page.html',
-//   styleUrls: ['./login.page.scss'],
-// })
-// export class LoginPage implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }

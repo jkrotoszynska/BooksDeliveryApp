@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastController, IonSlides, IonSlide, IonGrid, AlertController } from '@ionic/angular';
 import { FireserviceService } from '../fireservice.service';
 
 @Component({
@@ -11,10 +13,24 @@ export class SignupPage implements OnInit {
   public password: any;
   public name: any;
   constructor(
-    public fireService: FireserviceService
+    public router: Router,
+    public fireService: FireserviceService,
+    public alertController: AlertController
   ) { }
 
   ngOnInit() {
+  }
+
+  async showAlert() {
+    const alert = await this.alertController.create({
+      header: 'Register failed',
+      message: ' Invalid mail or password.',
+      buttons: ['OK']
+    });
+    await alert.present();
+
+    const {role} = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
   }
 
   signup(){
@@ -33,9 +49,14 @@ export class SignupPage implements OnInit {
         });
       }
     },err=>{
-      alert(err.message);
+      //alert(err.message);
+      this.showAlert();
 
       console.log(err);
     });
   }
+  login(){
+    this.router.navigateByUrl('');
+  }
+
 }

@@ -3,25 +3,40 @@
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
+
+<ion-content>
   <div class="form">
+    <div class="background-filter">
+      <div class="shape1"><img src="../../assets/shapee1.png" /></div>
+      <div class="shape2"><img src="../../assets/shape2.png" /></div>
 
-    <ion-item>
-      <ion-label position="stacked">Email</ion-label>
-      <ion-input [(ngModel)]='email'></ion-input>
-    </ion-item>
-    <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            Hello!
+          </ion-card-title>
+          <ion-card-subtitle>
+            Login and book your book
+          </ion-card-subtitle>
+        </ion-card-header>
 
-    <ion-item>
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input [(ngModel)]='password'></ion-input>
-    </ion-item>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input [(ngModel)]='email'></ion-input>
+        </ion-item>
 
-    <ion-button (click)='login()' expand='block'>Login</ion-button>
-    <br>
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input type="password" [(ngModel)]='password'></ion-input>
+        </ion-item>
+        <br>
 
-    <h5 (click)='signup()'>Don't have account? <ion-text color='primary'>signup here</ion-text>
-    </h5>
-    
+        <ion-button class='login-btn' (click)='login()' expand='block'>Login</ion-button>
+
+        <h5 (click)='signup()'>Don't have account? <ion-text color='success'>Sign up </ion-text></h5>
+      </ion-card-content>
+    </ion-card>
+    </div>
   </div>
 </ion-content>
