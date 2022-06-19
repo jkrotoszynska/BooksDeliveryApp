@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  API_URL: 'https://api.itbook.store/1.0',
 
   firebase : {
     apiKey: 'AIzaSyCDnRyymX-zZWAcY9qvt6jJBVKKgEtGaw8',

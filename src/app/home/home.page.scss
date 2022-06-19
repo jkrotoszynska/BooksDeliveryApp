@@ -1,7 +1,37 @@
-.header-ios .main-toolbar{
-  --background: transparent !important;
-  --border-width: 0 !important;
-  height: 80px !important;
-  --min-height: 105px !important
-  margin: 0;
+.banner{
+  text-align:center;
+  font-weight: bold;
+  font-size:20px; 
+}
+.banner2{
+  text-align:center;
+  font-weight:bold;
+  font-size: 20px;
+  color: green;
+  margin-top: -15px;
+}
+
+ion-content{
+  --background:#F4FAF6 !important;
+  font-family: Arial !important;
+}
+
+.searchbar{
+  padding:0px;
+  position:absolute;
+  left:0;
+  right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ion-searchbar{
+  --border-radius:10px;
+ color:grey;
+  --background:#DEDEDE;
+}
+
+#container{
+  display:absolute;
+  transform: translateY(-50%);
 }

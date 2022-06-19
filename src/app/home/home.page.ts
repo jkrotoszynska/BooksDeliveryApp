@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BooksService } from '../books.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  articles: any
 
-  constructor() {}
+  constructor(private newService:BooksService) {
+    this.loadNew();
+  }
 
+  loadNew(){
+    this.newService.getNew("search/mongodb").subscribe( news => {
+      this.articles = news;
+      console.log(this.articles);
+    })
+  }
 }
