@@ -8,7 +8,7 @@ import { BooksService } from '../books.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  articles: any
+  books: any
 
   constructor(private newService:BooksService) {
     this.loadNew();
@@ -16,8 +16,8 @@ export class HomePage {
 
   loadNew(){
     this.newService.getNew("search/mongodb").subscribe( news => {
-      this.articles = news;
-      console.log(this.articles);
+      this.books = news['books'];
+      console.log(this.books);
     })
   }
 }

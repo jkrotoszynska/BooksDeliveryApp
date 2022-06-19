@@ -6,11 +6,15 @@
 
 
 <ion-content [fullscreen]="true">
-  <div id="container"> 
-   
-    <div class="searchbar">
-      <ion-searchbar placeholder="Search" no-shadow></ion-searchbar>
+  <div class="searchbar">
+    <ion-searchbar placeholder="Search" no-shadow></ion-searchbar>
+    <div>
+      <ion-card *ngFor="let book of books">
+        <ion-img [src]="book.image"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{book.title}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
     </div>
-
-  </div>
+  </div> 
 </ion-content>
