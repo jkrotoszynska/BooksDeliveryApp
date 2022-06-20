@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
+
+  goToCart(){
+    this.router.navigateByUrl('cart');
+  }
 
   ngOnInit() {
   }

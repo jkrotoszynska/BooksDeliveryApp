@@ -27,6 +27,16 @@ const routes: Routes = [
           }
         ]
       },
+      // {
+      //   path: 'cart',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () =>
+      //         import('../../cart/cart.module').then(m => m.CartPageModule)
+      //     }
+      //   ]
+      // },
     ]
   },
 
