@@ -4,7 +4,7 @@ Stworzone w celu zaliczenia przedmiotu.
 
 # Informacje dodatkowe
 ***  
-__Narzędzia:__ Angular, HTML, SCSS   
-__Środowisko:__  Visual Studio Code
+__Narzędzia:__ Angular, HTML, SCSS, TypeScript   
+__Środowisko:__  Visual Studio Code   
 __Data zaliczenia:__ 22.06.2022     
 ***
