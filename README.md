@@ -6,5 +6,5 @@ Stworzone w celu zaliczenia przedmiotu.
 ***  
 __Narzędzia:__ Angular, HTML, SCSS, TypeScript   
 __Środowisko:__  Visual Studio Code   
-__Data zaliczenia:__ 22.06.2022     
+__API:__ [IT Bookstore API (version 1.0)](https://api.itbook.store/)   
 ***
