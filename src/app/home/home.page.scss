@@ -17,7 +17,6 @@ ion-toolbar{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
 ion-content{
   --background:#f7eddb !important;
   font-family: Arial !important;
@@ -37,6 +36,38 @@ ion-searchbar{
   --border-radius:10px;
  color:gray;
   --background:#f8f5f1;
+}
+
+ion-list{
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 100px;
+}
+
+ion-img{
+  height: 200px !important;
+  width: 200px !important;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+ion-card-header{
+  width: 250px;
+  text-align: center;
+  align-items: center;
+
+  ion-card-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #CD8742;
+    text-align: center;
+  }
+
+  ion-badge{
+    margin-top: 15px;
+    padding-bottom: 0;
+  }
 }
 
 ion-card{
@@ -85,5 +116,19 @@ ion-item{
   }
 }
 
+.price{
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
 
+.add{
+  --background: #7F9270;
+}
+
+
+ion-badge{
+  --background: #283618;
+}
 

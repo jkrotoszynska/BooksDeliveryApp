@@ -39,6 +39,38 @@ ion-searchbar {
   --background: #f8f5f1;
 }
 
+ion-list {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 100px;
+}
+
+ion-img {
+  height: 200px !important;
+  width: 200px !important;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+ion-card-header {
+  width: 250px;
+  text-align: center;
+  align-items: center;
+}
+
+ion-card-header ion-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #CD8742;
+  text-align: center;
+}
+
+ion-card-header ion-badge {
+  margin-top: 15px;
+  padding-bottom: 0;
+}
+
 ion-card {
   text-align: center;
 }
@@ -83,4 +115,19 @@ ion-item {
 ion-item ion-icon {
   font-size: 20px;
   margin-inline: 0 2px;
+}
+
+.price {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.add {
+  --background: #7F9270;
+}
+
+ion-badge {
+  --background: #283618;
 }

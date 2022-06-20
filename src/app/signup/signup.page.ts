@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastController, IonSlides, IonSlide, IonGrid, AlertController } from '@ionic/angular';
+import { ToastController, IonSlides, IonSlide, IonGrid, AlertController, LoadingController } from '@ionic/angular';
 import { FireserviceService } from '../fireservice.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class SignupPage implements OnInit {
   constructor(
     public router: Router,
     public fireService: FireserviceService,
-    public alertController: AlertController
+    public alertController: AlertController,
+    public loadingCtrl: LoadingController
   ) { }
 
   ngOnInit() {
@@ -33,6 +34,15 @@ export class SignupPage implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
+  async presentLoading() {
+    const loading = await this.loadingCtrl.create({
+      cssClass: 'my-custom-class',
+      message: 'Please wait...',
+      duration: 2000
+    });
+    await loading.present();
+  }
+
   signup(){
     this.fireService.signup({email:this.email,password:this.password}).then(res=>{
       if(res.user.uid){
@@ -44,6 +54,7 @@ export class SignupPage implements OnInit {
         };
         this.fireService.saveDetails(data).then(ress=>{
          //alert('Account Created!');
+         this.presentLoading();
          this.router.navigateByUrl('/tabs/tabs/home');
         },err=>{
           console.log(err);

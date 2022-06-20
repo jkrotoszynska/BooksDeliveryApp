@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BooksService } from '../books.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,10 @@ export class HomePage {
   books: any;
   myInput: string;
 
-  constructor(private newService: BooksService) {
+  constructor(
+    public router: Router,
+    private newService: BooksService
+    ) {
     this.loadNew();
   }
 
@@ -22,10 +26,11 @@ export class HomePage {
       console.log(this.books);
     });
    } else {
-    // this.newService.getNew('search/mongoDB').subscribe( news => {
-    //   this.books = news["books"];
-    //   console.log(this.books);
-    // })
+
   };
+  }
+
+  goTo(){
+    
   }
 }
