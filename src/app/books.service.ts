@@ -9,9 +9,9 @@ const API_URL = environment.API_URL;
 })
 export class BooksService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getNew(url){
-    return this.http.get(`${API_URL}/${url}`)
+    return this.http.get(`${API_URL}/${url}`);
   }
 }

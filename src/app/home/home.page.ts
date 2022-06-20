@@ -8,16 +8,24 @@ import { BooksService } from '../books.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  books: any
+  books: any;
+  myInput: string;
 
-  constructor(private newService:BooksService) {
+  constructor(private newService: BooksService) {
     this.loadNew();
   }
 
   loadNew(){
-    this.newService.getNew("search/mongodb").subscribe( news => {
-      this.books = news['books'];
+   if(this.myInput != null){
+    this.newService.getNew('search/' + this.myInput).subscribe( news => {
+      this.books = news["books"];
       console.log(this.books);
-    })
+    });
+   } else {
+    // this.newService.getNew('search/mongoDB').subscribe( news => {
+    //   this.books = news["books"];
+    //   console.log(this.books);
+    // })
+  };
   }
 }

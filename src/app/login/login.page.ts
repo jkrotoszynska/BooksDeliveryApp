@@ -40,7 +40,7 @@ export class LoginPage implements OnInit {
         this.fireService.getDetails({uid:res.user.uid}).subscribe(ress=>{
           console.log(ress);
           //alert('Welcome '+ ress['name']);
-          this.router.navigateByUrl('home');
+          this.router.navigateByUrl('/tabs/tabs/home');
         },err=>{
           console.log(err);
         });
