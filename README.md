@@ -4,7 +4,7 @@ Stworzone w celu zaliczenia przedmiotu.
 
 # Informacje dodatkowe
 ***  
-__Narzędzia:__ Angular, HTML, SCSS, TypeScript   
+__Narzędzia:__ Angular, HTML, SCSS, TypeScript, Firebase   
 __Środowisko:__  Visual Studio Code   
 __API:__ [IT Bookstore API (version 1.0)](https://api.itbook.store/)   
 ***
