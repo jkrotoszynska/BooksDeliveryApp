@@ -29,7 +29,8 @@ const routes: Routes = [
   {
     path: 'book/:isbn13',
     loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
-  }
+  },
+
 ];
 @NgModule({
   imports: [

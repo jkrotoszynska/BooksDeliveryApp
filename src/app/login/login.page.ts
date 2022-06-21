@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController, IonSlides, IonSlide, IonGrid, AlertController } from '@ionic/angular';
 import { FireserviceService } from '../fireservice.service';
+import { Vibration } from '@awesome-cordova-plugins/vibration/ngx';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginPage implements OnInit {
   constructor(
     public router: Router,
     public fireService: FireserviceService,
-    public alertController: AlertController
+    public alertController: AlertController,
+    //private vibration: Vibration
   ) { }
 
   ngOnInit() {
@@ -40,7 +42,6 @@ export class LoginPage implements OnInit {
         this.fireService.getDetails({uid:res.user.uid}).subscribe(ress=>{
           console.log(ress);
           //alert('Welcome '+ ress['name']);
-          let username = ress['name'];
           this.router.navigateByUrl('/tab/home');
         },err=>{
           console.log(err);
@@ -49,6 +50,7 @@ export class LoginPage implements OnInit {
     },err=>{
       //alert(err.message);
       this.showAlert();
+      //this.vibration.vibrate(1000);
       console.log(err);
     });
   }

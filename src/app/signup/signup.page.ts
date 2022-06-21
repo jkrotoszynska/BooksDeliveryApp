@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController, IonSlides, IonSlide, IonGrid, AlertController, LoadingController } from '@ionic/angular';
 import { FireserviceService } from '../fireservice.service';
+import { Vibration } from '@awesome-cordova-plugins/vibration/ngx';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +17,8 @@ export class SignupPage implements OnInit {
     public router: Router,
     public fireService: FireserviceService,
     public alertController: AlertController,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    //private vibration: Vibration
   ) { }
 
   ngOnInit() {
@@ -63,7 +65,7 @@ export class SignupPage implements OnInit {
     },err=>{
       //alert(err.message);
       this.showAlert();
-
+      //this.vibration.vibrate(1000);
       console.log(err);
     });
   }
