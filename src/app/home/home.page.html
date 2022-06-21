@@ -9,21 +9,21 @@
     <ion-searchbar animated placeholder="Search" [(ngModel)]="myInput" (keyup.enter)="loadNew($event)">
   </ion-searchbar>
 
-      <ion-list>
-      <ion-item button *ngFor="let book of books" onClick="goTo()">
+      <ion-card *ngFor="let book of books">
         <ion-card-header>
           <ion-card-title>{{book.title}}</ion-card-title>
           <ion-badge >{{book.price}}</ion-badge>
           <ion-img [src]="book.image"></ion-img>
-          <ion-button class="add">Add to cart</ion-button>
+          <ion-button class="add" (click)="openModal()">Show more</ion-button>
           <!-- <ion-card-content>{{book.isbn13}}</ion-card-content> -->
         </ion-card-header>
-      </ion-item>
-    </ion-list>
+      </ion-card>
   
     <!-- <ion-infinite-scroll (ionInfinite)="loadMore($event)">
       <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
     </ion-infinite-scroll> -->
 
   </div>
+
+
 </ion-content>
