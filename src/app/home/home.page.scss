@@ -1,134 +1,79 @@
-.banner{
-  text-align:center;
-  font-weight: bold;
-  font-size:20px; 
-  color: black;
+ion-header{
+  .banner{
+    text-align:center;
+    font-weight: bold;
+    font-size:20px; 
+    color: black;
+  }
+  .banner2{
+    text-align:center;
+    font-weight:bold;
+    font-size: 20px;
+    color: #c69f5d;
+    margin-top: -20px;
+  }
+  
+  ion-toolbar{
+    --background: #f7eddb;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
 }
-.banner2{
-  text-align:center;
-  font-weight:bold;
-  font-size: 20px;
-  color: #BB6B25;
-  margin-top: -20px;
-}
-
-ion-toolbar{
-  --background: #f7eddb;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
+  
 ion-content{
-  --background:#f7eddb !important;
-  font-family: Arial !important;
+    --background:#f7eddb !important;
+    font-family: Arial !important;
+
+
+  .searchbar{
+    padding:0px;
+    position:absolute;
+    left:0;
+    right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 150px;
+
+    ion-searchbar{
+      --border-radius:10px;
+     color:gray;
+      --background:#f8f5f1;
+    }
+  }
 }
 
-.searchbar{
+
+ion-card{
+  text-align: center;
+  align-items: center;
   padding:0px;
-  position:absolute;
   left:0;
   right: 0;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 150px;
-}
 
-ion-searchbar{
-  --border-radius:10px;
- color:gray;
-  --background:#f8f5f1;
-}
+  ion-card-header{
+    padding: 5px;
+  
+    ion-card-title{
+      font-size: 16px;
+      font-weight: bold;
+      color: #CD8742;
+      text-align: center;
+      padding: 0;
+    }
 
-ion-list{
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 100px;
-}
-
-ion-img{
-  height: 200px !important;
-  width: 200px !important;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-ion-card-header{
-  width: 250px;
-  text-align: center;
-  align-items: center;
-
-  ion-card-title{
-    font-size: 16px;
-    font-weight: bold;
-    color: #CD8742;
-    text-align: center;
-  }
-
-  ion-badge{
-    margin-top: 15px;
-    padding-bottom: 0;
+    ion-badge{
+      --background: #283618;
+    }
+  
+    ion-badge{
+      margin-top: 15px;
+      padding-bottom: 0;
+    }
+    .add{
+      --background: #7F9270;
+    }
   }
 }
 
-ion-card{
-  text-align:center;
-}
-
-p{
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 0;
-
-}
-
-main-featured-products{
-  color:#000 !important;
-}
-
-ion-slides{
-  --bullet-background: black;
-  --bullet-background-active: brown;
-}
-
-.card-wrapper{
-  background: grey !important;   
-}
-
-.main-product-card{
-  background: grey;
-  border-radius: 20px;
-
-  ion-card-title{
-    color: black;
-  }
-}
-
-.main-product-card img{
-  padding: 80px 0px 20px 0px;
-}
-
-ion-item{
-  --background: transparent;
-  ion-icon{
-    font-size: 20px;
-    margin-inline: 0 2px;
-  }
-}
-
-.price{
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.add{
-  --background: #7F9270;
-}
-
-
-ion-badge{
-  --background: #283618;
-}
 

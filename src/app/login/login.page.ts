@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
           console.log(ress);
           //alert('Welcome '+ ress['name']);
           let username = ress['name'];
-          this.router.navigateByUrl('/tabs/tabs/home');
+          this.router.navigateByUrl('/tab/home');
         },err=>{
           console.log(err);
         });

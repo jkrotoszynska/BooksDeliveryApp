@@ -10,24 +10,26 @@
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .main-cont .user-div .username {
-  padding-top: 70px;
+  padding-top: 40px;
   font-size: 20px;
   color: white;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .main-cont .user-div ion-icon {
   height: 100px;
   width: 100px;
   color: white;
+  margin-right: 20px;
 }
 
 .cont-div {
-  background: #f7eddb;
+  background: white;
   width: 100%;
   border-top-left-radius: 75px;
   margin-top: -90px;
@@ -36,6 +38,7 @@
 }
 
 .cont-div .details {
+  background: #f7eddb;
   width: 100%;
   border-radius: 5px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
@@ -74,7 +77,16 @@
   transform: translate(-50%, -50%);
 }
 
+.cont-div .details ion-grid .flex-div .more {
+  padding: 20px;
+}
+
+.cont-div .details ion-grid .flex-div .more .number {
+  font-weight: bold;
+}
+
 .cont-div .menu {
+  background: #f7eddb;
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
