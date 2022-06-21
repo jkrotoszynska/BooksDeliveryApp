@@ -2,8 +2,21 @@
   <div class="main-cont">
     <div class="user-div">
       <ion-label class="username">username</ion-label>
-      <ion-icon name="person-circle-outline"></ion-icon>
-      </div>  
+      <!-- <ion-icon name="person-circle-outline"></ion-icon> -->
+      <div class="preview">
+        <ion-avatar>
+          <img
+            *ngIf="profile?.imageUrl; else placeholder_avatar;"
+            [src]="madePic.image"
+          />
+          <ng-template #placeholder_avatar>
+            <div class="fallback">
+              <p>Select avatar</p>
+            </div>
+          </ng-template>
+        </ion-avatar>
+      </div>
+    </div>
   </div>
   <div class="cont-div">
     <div class="details">
@@ -27,7 +40,7 @@
       <ion-label> Orders History </ion-label>
       <ion-icon name="chevron-forward-outline"></ion-icon>
     </div>
-    <div class="menu" (click)='changePic()'>
+    <div class="menu" (click)="changePic()">
       <ion-label> Change Profile Picture </ion-label>
       <ion-icon name="chevron-forward-outline"></ion-icon>
     </div>
@@ -35,10 +48,9 @@
       <ion-label> Change Password </ion-label>
       <ion-icon name="chevron-forward-outline"></ion-icon>
     </div>
-    <div class="menu" (click)='logout()'>
+    <div class="menu" (click)="logout()">
       <ion-label> Log out </ion-label>
       <ion-icon name="chevron-forward-outline"></ion-icon>
     </div>
-
   </div>
 </ion-content>

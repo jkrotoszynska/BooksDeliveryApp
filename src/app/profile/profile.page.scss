@@ -1,7 +1,6 @@
 .main-cont{
     width: 100%;
 
-
     .user-div{
         padding: 20px;
         width: 100%;
@@ -23,6 +22,29 @@
             width: 100px;
             color: white;
             margin-right: 20px;
+        }
+
+        ion-avatar{
+            width: 128px;
+            height: 128px;
+        }
+
+        .preview{
+            margin-top:50px;
+            display: flex;
+            justify-content: right;
+        }
+
+        .fallback{
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            background: #bfbfbf;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
         }
     }
 }

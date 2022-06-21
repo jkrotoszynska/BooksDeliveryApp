@@ -9,6 +9,8 @@ import { Camera, CameraOptions } from '@awesome-cordova-plugins/camera/ngx';
 })
 export class ProfilePage implements OnInit {
 
+  madePic: madePic = new madePic();
+
   constructor(
     public router: Router,
     private camera: Camera
@@ -39,5 +41,8 @@ export class ProfilePage implements OnInit {
       }
     );
   }
+}
 
+class madePic{
+  image: string;
 }
