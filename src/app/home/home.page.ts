@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { BooksService } from '../books.service';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
-import { InfoModalComponent } from '../info-modal/info-modal.component';
+import { InfoModalComponent } from '../infomodal/infomodal.component';
+import { Book } from '../book/book.component'
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomePage {
   constructor(
     public router: Router,
     private newService: BooksService,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
     ) {
     this.loadNew();
   }
@@ -27,22 +28,21 @@ export class HomePage {
       this.books = news["books"];
       console.log(this.books);
     });
-   } else {
-
-  };
+   }
   }
 
-  async openModal(){
+  async openModal(books){
     const modal = await this.modalCtrl.create({
       component: InfoModalComponent,
       initialBreakpoint: 0.5,
       breakpoints: [0, 0.5, 1],
-      cssClass: 'my-custom-class',
       componentProps: {
-        title: [this.books.title]
+        "title" : books.title,
+        "subtitle": books.subtitle,
+        "isbn13": books.isbn13, 
+        "price": books.price
       }
     });
-
 
     return await modal.present();
   }

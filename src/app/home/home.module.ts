@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { InfoModalComponent } from '../info-modal/info-modal.component';
+import { InfoModalComponent } from '../infomodal/infomodal.component';
 
 
 @NgModule({

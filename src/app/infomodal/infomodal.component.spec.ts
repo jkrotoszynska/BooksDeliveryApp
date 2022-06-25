@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { InfoModalComponent } from './info-modal.component';
+import { InfoModalComponent } from './infomodal.component';
 
 describe('InfoModalComponent', () => {
   let component: InfoModalComponent;
