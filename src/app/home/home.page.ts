@@ -26,7 +26,7 @@ export class HomePage {
    if(this.myInput != null){
     this.newService.getNew('search/' + this.myInput).subscribe( news => {
       this.books = news["books"];
-      console.log(this.books);
+      //console.log(this.books);
     });
    }
   }
@@ -34,17 +34,23 @@ export class HomePage {
   async openModal(books){
     const modal = await this.modalCtrl.create({
       component: InfoModalComponent,
-      initialBreakpoint: 0.5,
-      breakpoints: [0, 0.5, 1],
+      initialBreakpoint: 0.3,
+      breakpoints: [0, 0.3, 0.5],
       componentProps: {
-        "title" : books.title,
-        "subtitle": books.subtitle,
-        "isbn13": books.isbn13, 
-        "price": books.price
+        title : books.title,
+        subtitle: books.subtitle,
+        isbn13: books.isbn13,
+        price: books.price
       }
     });
 
     return await modal.present();
   }
+
+  async addtocart(books){
+    console.log('add');
+
+  }
+
 
 }

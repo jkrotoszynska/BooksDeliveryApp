@@ -18,11 +18,14 @@ ion-header{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 }
+
+.items{
+  margin-bottom: 100px;
+}
   
 ion-content{
     --background:#f7eddb !important;
     font-family: Arial !important;
-
 
   .searchbar{
     padding:0px;
@@ -55,23 +58,27 @@ ion-card{
     padding: 5px;
   
     ion-card-title{
+      margin-top: 10px;
       font-size: 16px;
       font-weight: bold;
       color: #CD8742;
       text-align: center;
       padding: 0;
+      margin-bottom: -10px;
     }
 
     ion-badge{
       --background: #283618;
+      margin-bottom: -30px;
     }
-  
-    ion-badge{
-      margin-top: 15px;
-      padding-bottom: 0;
+
+    ion-img{
+      margin-bottom: -20px;
     }
-    .add{
+
+    .btn{
       --background: #7F9270;
+      margin-bottom: 10px;
     }
   }
 }

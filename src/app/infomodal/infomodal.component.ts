@@ -11,10 +11,10 @@ import { BooksService } from '../books.service';
 export class InfoModalComponent implements OnInit {
 
   constructor(
-    public navParams: NavParams, 
+    public navParams: NavParams,
     public viewCtrl: ModalController,
     private modalCtrl: ModalController,
-    private activatedRoute: ActivatedRoute, 
+    private activatedRoute: ActivatedRoute,
     private newService: BooksService
     ) { }
 
