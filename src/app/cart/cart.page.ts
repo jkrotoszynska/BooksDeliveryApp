@@ -20,20 +20,12 @@ export class CartPage implements OnInit {
     this.cart = this.cartService.getCart();
   }
 
-  decreaseCartItem(book){
-    this.cartService.decreaseProduct(book);
-  }
-
-  increaseCartItem(book){
-    this.cartService.addProduct(book);
-  }
-
   removeCartItem(book){
     this.cartService.removeProducts(book);
   }
 
   getTotal(){
-   
+   return this.cart.reduce((i,b) => i + parseInt(b.price), 0);
   }
 
 }

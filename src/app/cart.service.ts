@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-//import { NavParams } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
-//import { Book } from './book/book.component';
 
 export class Book{
   title: string;
@@ -16,13 +14,13 @@ export class Book{
   providedIn: 'root'
 })
 export class CartService {
-  data: Book[]; // tu trzeba chyba do api się odwłoać ??
+  data: Book[];
 
   private cart = [];
   private cartItemCount = new BehaviorSubject(0);
 
   constructor(
-    //public navParams: NavParams
+    
   ) { }
 
   getProducts(){
@@ -33,22 +31,16 @@ export class CartService {
     return this.cart;
   }
 
-  getCartItemCount(){
-    return this.cartItemCount;
-  }
 
   addProduct(book){
     this.cart.push(book);
-    this.cartItemCount.next(this.cartItemCount.value +1);
-    console.log(this.cartItemCount);
-  }
-
-  decreaseProduct(book){
-
   }
 
   removeProducts(book){
-
+    for(let [index, b] of this.cart.entries()){
+      this.cart.splice(index,1);
+      console.log(b)
+    }
   }
 
 }

@@ -6,25 +6,11 @@
 
           <ion-row class="ion-align-items-center">
 
-            <ion-col size="2" class="ion-align-self-center">
-              <ion-button color="medium" fill="clear" (click)="decreaseCartItem(prod)">
-              <ion-icon name="remove=circle" slot="icon-only"></ion-icon>
-            </ion-button>
-            </ion-col>
-
-            <ion-col size="2" class="ion-align-self-center">
-              <ion-button color="medium" fill="clear" (click)="increaseCartItem(prod)">
-                <ion-icon name="add-circle" slot="icon-only"></ion-icon>
-              </ion-button>
-            </ion-col>
-
-            <ion-col size="2" offset="5">
+            <ion-col size="12" class="ion-text-end">
               <ion-button color="medium" fill="clear" (click)="removeCartItem(prod)">
-                <ion-icon name="close-circle" slot="icon-only"></ion-icon>
+                <ion-icon name="close-circle"></ion-icon>
               </ion-button>
             </ion-col>
-          </ion-row> 
-          <ion-row>
             <ion-col size="9">
               <b>{{ prod.title }}</b>
             </ion-col>
