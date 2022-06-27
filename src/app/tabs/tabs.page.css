@@ -17,3 +17,10 @@ ion-tab-bar ion-tab-button {
   left: 0 !important;
   right: 0 !important;
 }
+
+.card-length{
+  color: black;
+  position: absolute;
+  font-weight: 600;
+  font-size: 1em;
+}

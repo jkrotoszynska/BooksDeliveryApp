@@ -22,5 +22,5 @@ export class Book{
     public image: string,
     public url: string
 
-  ) { }  
+  ) { }
 }
