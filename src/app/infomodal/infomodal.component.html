@@ -1,15 +1,15 @@
-<div class="modal">
+<div class="modal" style="background: #f7eddb;">
   <ion-card>
     <ion-header>
       <ion-toolbar>
-        <ion-title>ABOUT BOOK</ion-title>
+        <h1>{{navParams.data.title}}</h1>
       </ion-toolbar>
     </ion-header>
 
     <ion-card-content>
-        <h1>{{navParams.data.title}}</h1>
+       
         <ion-label>{{navParams.data.subtitle}}</ion-label>
-        {{navParams.data.isbn13}}
+        <h2>IBSN13: <p style="display:inline">{{navParams.data.isbn13}}</p></h2>
     </ion-card-content>
   </ion-card>
 </div>

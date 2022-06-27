@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
     await alert.present();
 
     const {role} = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
+    //console.log('onDidDismiss resolved with role', role);
   }
 
   login(){
@@ -40,18 +40,18 @@ export class LoginPage implements OnInit {
       console.log(res);
       if(res.user.uid){
         this.fireService.getDetails({uid:res.user.uid}).subscribe(ress=>{
-          console.log(ress);
+          //console.log(ress);
           //alert('Welcome '+ ress['name']);
           this.router.navigateByUrl('/tab/home');
         },err=>{
-          console.log(err);
+          //console.log(err);
         });
       }
     },err=>{
       //alert(err.message);
       this.showAlert();
       //this.vibration.vibrate(1000);
-      console.log(err);
+      //console.log(err);
     });
   }
   signup(){
