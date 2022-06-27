@@ -10,6 +10,7 @@ import { ModalController } from '@ionic/angular';
 export class CartPage implements OnInit {
 
   cart: Book[] = [];
+  total: any;
 
   constructor(
     private cartService: CartService,
@@ -25,7 +26,14 @@ export class CartPage implements OnInit {
   }
 
   getTotal(){
-   return this.cart.reduce((i,b) => i + parseInt(b.price), 0);
+  //  let result = this.cart.reduce((i,b) => i + parseInt(b.price), 0);
+  //  console.log(result);
+  //let total = 0;
+  for(let [index,b] of this.cart.entries()){
+    //console.log(parseInt(b.price));
+    this.total += parseInt(b.price);
   }
+  return this.total;
+}
 
 }
