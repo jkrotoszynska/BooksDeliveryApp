@@ -14,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { Camera } from '@awesome-cordova-plugins/camera/ngx';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

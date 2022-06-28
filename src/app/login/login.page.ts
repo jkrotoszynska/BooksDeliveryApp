@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastController, IonSlides, IonSlide, IonGrid, AlertController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { FireserviceService } from '../fireservice.service';
 import { Vibration } from '@awesome-cordova-plugins/vibration/ngx';
+import { NativePageTransitions, NativeTransitionOptions } from '@awesome-cordova-plugins/native-page-transitions/ngx';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +19,8 @@ export class LoginPage implements OnInit {
     public router: Router,
     public fireService: FireserviceService,
     public alertController: AlertController,
+    private nativePageTransitions: NativePageTransitions,
+    public navCtrl: NavController
     //private vibration: Vibration
   ) { }
 
