@@ -1,0 +1,9 @@
+ion-content {
+  --background: #f7eddb !important;
+  font-family: Arial !important;
+}
+
+ion-content ion-list {
+  padding: 0;
+  margin: 0;
+}
