@@ -10,12 +10,13 @@
         justify-content: space-between;
         padding-top: 30px;
         margin-bottom: 20px;
-        .username{
+
+        .text{
             padding-top: 110px;
             font-size: 20px;
             color: white;
             font-weight: bold;
-            margin-left: 40px;
+            margin-left: 25px;
         }
         ion-icon{
             height: 100px;
@@ -25,8 +26,9 @@
         }
 
         ion-avatar{
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
+            margin-right: 25px;
         }
 
         .preview{

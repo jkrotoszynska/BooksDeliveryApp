@@ -1,7 +1,10 @@
 {
   "name": "deliveryApp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": true
+    },
+    "cordova": {}
   },
   "type": "angular"
 }

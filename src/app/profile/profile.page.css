@@ -13,12 +13,12 @@
   margin-bottom: 20px;
 }
 
-.main-cont .user-div .username {
-  padding-top: 40px;
+.main-cont .user-div .text {
+  padding-top: 110px;
   font-size: 20px;
   color: white;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .main-cont .user-div ion-icon {
@@ -29,8 +29,9 @@
 }
 
 .main-cont .user-div ion-avatar {
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
+  margin-right: 25px;
 }
 
 .main-cont .user-div .preview {
@@ -40,8 +41,8 @@
 }
 
 .main-cont .user-div .fallback {
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: #bfbfbf;
   display: flex;
@@ -53,8 +54,8 @@
 .cont-div {
   background: white;
   width: 100%;
-  border-top-left-radius: 75px;
-  margin-top: -90px;
+  border-top-left-radius: 70px;
+  margin-top: -100px;
   padding: 20px;
   padding-top: 30px;
 }
@@ -62,6 +63,7 @@
 .cont-div .details {
   background: #f7eddb;
   width: 100%;
+  margin-top: 20px;
   border-radius: 5px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
   padding: 10px;
