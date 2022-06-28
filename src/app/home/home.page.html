@@ -15,8 +15,8 @@
           <ion-card-title>{{book.title}}</ion-card-title>
           <ion-badge >{{book.price}}</ion-badge>
           <ion-img [src]="book.image"></ion-img>
-          <ion-button class="btn" (click)="openModal(book)">Show more</ion-button>
-          <ion-button class="btn" (click)="addtocart(book)">Add to cart</ion-button>
+          <ion-button id="btn" class="btn" (click)="openModal(book)">Show more</ion-button>
+          <ion-button id="btn" class="btn" (click)="addtocart(book)">Add to cart</ion-button>
         </ion-card-header>
       </ion-card>
     </div>
