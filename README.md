@@ -12,3 +12,4 @@ __API:__ [IT Bookstore API (version 1.0)](https://api.itbook.store/)
 ![Ekran logowania](./pictures/login-page.PNG) 
 ![Ekran_glowny](./pictures/main-screen.PNG) 
 ![Modal](./pictures/modal.PNG) 
+   
