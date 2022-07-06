@@ -9,4 +9,4 @@ __Środowisko:__  Visual Studio Code
 __API:__ [IT Bookstore API (version 1.0)](https://api.itbook.store/)   
 ***
 # App sneak peek 
-...
+![Ekran logowania](./pictures/login-page.PNG) 
